@@ -254,6 +254,11 @@ class Gui:
         
         try:
             
+            if os.path.exists(path):
+                Gui.warningWindow("Databáze nalezena.")
+            else:
+                Gui.warningWindow("Databáze nenalezena.")
+            
             window = Tki.Tk()
             window.geometry("300x150")
             window.title("DLUHAŘ")
