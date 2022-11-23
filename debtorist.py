@@ -252,6 +252,11 @@ class Gui:
         
         try:
             
+            if os.path.exists(path):
+                Gui.warningWindow("Database was found.")
+            else:
+                Gui.warningWindow("Database wasn't found.")
+            
             window = Tki.Tk()
             window.geometry("300x150")
             window.title("DEBTORIST")
