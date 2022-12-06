@@ -202,8 +202,7 @@ class Gui:
         warning.title("WARNING")
     
         te = Tki.Text(warning, height = 30, width=30)
-        cont = text
-        te.insert(Tki.END, cont)
+        te.insert(Tki.END, text)
         Tki.Button(warning, text="OK", command=warning.destroy).place(x=100, y=70)
         te.pack()
         warning.attributes('-topmost', True)
